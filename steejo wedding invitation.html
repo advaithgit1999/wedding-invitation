@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #f5efe6 0%, #e8d5b7 100%);
+      overflow-x: hidden;
+      color: #4a4a4a;
+    }
+
+    /* Enhanced floating rose petal animation with premium feel */
+    .petal {
+      position: fixed;
+      top: -10%;
+      width: 25px;
+      height: 40px;
+      pointer-events: none;
+      animation: fall linear infinite;
+      opacity: 0.7;
+      z-index: 1;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3)) hue-rotate(10deg);
+    }
+
+    .petal.large {
+      width: 35px;
+      height: 55px;
+      opacity: 0.9;
+    }
+
+    .petal.small {
+      width: 15px;
+      height: 25px;
+      opacity: 0.5;
+    }
+
+    @keyframes fall {
+      0% { 
+        transform: translateY(-10%) rotate(0deg) scale(1); 
+        opacity: 0.7;
+      }
+      25% { 
+        transform: translateY(25vh) rotate(90deg) scale(1.05);
+      }
+      50% { 
+        opacity: 1; 
+        transform: translateY(50vh) rotate(180deg) scale(1.1);
+      }
+      75% {
+        transform: translateY(75vh) rotate(270deg) scale(0.95);
+      }
+      100% { 
+        transform: translateY(110vh) rotate(360deg) scale(0.9); 
+        opacity: 0.3;
+      }
+    }
+
+    .card {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      border: 5px solid #d4af37;
+      background-image: url('https://i.imgur.com/8yKXk8W.png'), url('https://i.imgur.com/8yKXk8W.png');
+      background-repeat: no-repeat;
+      background-position: top left, bottom right;
+      background-size: 100px;
+      z-index: 2;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: linear-gradient(45deg, #f8e8a6, #d4af37);
+      border-radius: 35px;
+      z-index: -1;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      color: #8a4fff;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #6b5b95;
+      margin: 20px 0;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      color: #4a4a4a;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+
+    .couple-img {
+      width: 300px;
+      border-radius: 20px;
+      margin: 30px 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      border: 3px solid #d4af37;
+    }
+
+    .btn-map {
+      padding: 15px 30px;
+      background: linear-gradient(45deg, #8a4fff, #b07bff);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+      box-shadow: 0 5px 15px rgba(138, 79, 255, 0.3);
+    }
+
+    .btn-map:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(138, 79, 255, 0.5);
+    }
+
+    .divider {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, #8a4fff, #d4af37);
+      margin: 20px auto;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        margin: 20px;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+      .couple-img {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Falling rose petals using your image -->
+  <img src="red-png.png" class="petal small" style="left:5%; animation-duration:8s; animation-delay:0s;" />
+  <img src="red-png.png" class="petal" style="left:15%; animation-duration:10s; animation-delay:1s;" />
+  <img src="red-png.png" class="petal large" style="left:25%; animation-duration:7s; animation-delay:2s;" />
+  <img src="red-png.png" class="petal small" style="left:35%; animation-duration:9s; animation-delay:0.5s;" />
+  <img src="red-png.png" class="petal" style="left:45%; animation-duration:11s; animation-delay:3s;" />
+  <img src="red-png.png" class="petal large" style="left:55%; animation-duration:6s; animation-delay:1.5s;" />
+  <img src="red-png.png" class="petal small" style="left:65%; animation-duration:12s; animation-delay:2.5s;" />
+  <img src="red-png.png" class="petal" style="left:75%; animation-duration:8s; animation-delay:0.8s;" />
+  <img src="red-png.png" class="petal large" style="left:85%; animation-duration:10s; animation-delay:4s;" />
+  <img src="red-png.png" class="petal small" style="left:10%; animation-duration:9s; animation-delay:1.2s;" />
+  <img src="red-png.png" class="petal" style="left:50%; animation-duration:7s; animation-delay:2.8s;" />
+  <img src="red-png.png" class="petal large" style="left:70%; animation-duration:11s; animation-delay:0.3s;" />
+
+  <div class="card">
+    <h2>St. Joseph's Church, Kottamam</h2>
+    <div class="divider"></div>
+    <img src="steejo.jpg" class="couple-img" alt="Steejo and Jesna" />
+
+    <p>We cordially invite your prayerful and gracious presence<br>
+       with family on the auspicious occasion of the wedding of</p>
+
+    <h1>Steejo Xavier</h1>
+    <h3>&</h3>
+    <h1>Jesna Shaju</h1>
+
+    <p>On <b>Sunday, November 23, 2025 – 11:45 AM</b></p>
+
+    <h3>Reception @ Puthen Antony Memorial Auditorium, Neeleeswaram</h3>
+
+    <button class="btn-map" onclick="openLocation()">Open Google Map</button>
+  </div>
+
+  <script>
+    function openLocation() {
+      const url = "https://www.google.com/maps/search/?api=1&query=5FPF+7VJ,+Neeleeswaram,+Kerala";
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
